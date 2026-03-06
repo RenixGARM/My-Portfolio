@@ -1,0 +1,158 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400&f[]=gambetta@301&f[]=chillax@300,400&f[]=jetbrains-mono@400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0D0D0D;
+  --color-foreground: #FFFFFF;
+  --color-secondary: #FFFFFF;
+  --color-accent: #CB4E3D;
+  --color-accent-dark: #A33325;
+  --color-container: #343434;
+  --color-blue-dark: #061922;
+  --color-marquee-text: #fefae0;
+  /* Very subtle contrast */
+
+  --font-sans: 'Chillax', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: 'Satoshi', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: 'Gambetta', ui-serif, Georgia, Cambria, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* By default Tailwind 4 colors: white and black. We map them internally. */
+  --custom-color-white: #FFFFFF;
+  --custom-color-black: #0D0D0D;
+}
+
+@layer base {
+
+  /* Light theme overrides */
+  .light {
+    --color-background: #fefae0;
+    --color-foreground: #0D0D0D;
+    --color-marquee-text: #0D0D0D;
+
+    /* Invert white/black for the semantic utilities */
+    --color-white: #0D0D0D;
+    --color-black: #fefae0;
+
+    --color-container: #eae2b7;
+    --color-blue-dark: #f0e6cd;
+
+    /* Background overrides for inverted components */
+    --color-secondary: #0D0D0D;
+  }
+}
+
+
+.animate-scale-fade {
+  animation: scale-fade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Button Fill Hover Effect */
+.btn-fill-hover {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+
+.btn-fill-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #CB4E3D;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: left;
+}
+
+.btn-fill-hover:hover::before {
+  transform: translateX(0);
+}
+
+.btn-fill-hover:hover {
+  color: #fff !important;
+  border-color: #CB4E3D !important;
+}
+
+/* Aurora Background Blobs */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(8vw, -10vh) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-5vw, 8vh) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animation-delay-6000 {
+  animation-delay: 6s;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-foreground font-sans antialiased overflow-x-hidden;
+    background: linear-gradient(135deg, var(--color-background) 0%, var(--color-blue-dark) 100%);
+    background-attachment: fixed;
+    cursor: none;
+    transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
+    /* We use custom cursor */
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-container);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+  }
+
+  /* Make sure links handle the custom cursor visually */
+  a,
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea {
+    cursor: none;
+  }
+}
