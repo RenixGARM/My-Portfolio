@@ -10,7 +10,7 @@ export default function ProblemSolution() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: 'top 70%',
+                start: 'top 85%',
                 end: 'bottom bottom',
                 toggleActions: 'play reverse play reverse'
             }

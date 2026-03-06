@@ -16,21 +16,22 @@ export default function Navbar() {
 
     return (
         <nav ref={navRef} className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-5xl px-6">
-            <div className="bg-foreground/5 backdrop-blur-md border border-foreground/10 rounded-full px-6 py-3 flex items-center justify-between">
-                <a href="#sobre-mi" className="font-mono text-xs uppercase tracking-widest text-foreground/90 hidden sm:block hover:text-foreground transition-colors cursor-pointer">
+            <div className="bg-background/80 backdrop-blur-md border border-foreground/10 rounded-full px-4 sm:px-6 py-3 flex items-center justify-between shadow-sm">
+                <a href="#sobre-mi" className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-foreground/90 hover:text-foreground transition-colors cursor-pointer shrink-0">
                     Roberto Chamorro
                 </a>
-                <div className="flex items-center gap-6">
-                    <a href="#proyectos" className="font-sans text-xs uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors cursor-pointer">Proyectos</a>
+                <div className="flex items-center gap-4 sm:gap-6">
+                    <a href="#proyectos" className="font-sans text-[10px] sm:text-xs uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors cursor-pointer">Proyectos</a>
                     <a href="#experiencia" className="font-sans text-xs uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors cursor-pointer hidden md:block">Experiencia</a>
                     <a href="#skills" className="font-sans text-xs uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors cursor-pointer hidden lg:block">Skills</a>
                     <a href="#proceso" className="font-sans text-xs uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors cursor-pointer hidden md:block">El Proceso</a>
-                    <a href="https://www.linkedin.com/in/roberto-chamorro-41034586" target="_blank" rel="noreferrer" className="font-sans text-xs uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors cursor-pointer">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/roberto-chamorro-41034586" target="_blank" rel="noreferrer" className="font-sans text-[10px] sm:text-xs uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors cursor-pointer hidden sm:block">LinkedIn</a>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 sm:gap-3 shrink-0">
                     <ThemeToggle />
-                    <MagneticButton href="#contact" className="px-6 py-2 text-xs uppercase tracking-wider bg-foreground text-background rounded-full transition-colors cursor-pointer btn-fill-hover">
-                        Hablemos
+                    <MagneticButton href="#contact" className="px-4 py-2 sm:px-6 text-[10px] sm:text-xs uppercase tracking-wider bg-foreground text-background rounded-full transition-colors cursor-pointer btn-fill-hover shrink-0">
+                        <span className="hidden sm:inline">Hablemos</span>
+                        <span className="sm:hidden">CV</span>
                     </MagneticButton>
                 </div>
             </div>

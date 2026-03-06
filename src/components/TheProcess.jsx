@@ -18,7 +18,7 @@ export default function TheProcess() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: 'top 70%',
+                start: 'top 85%',
                 toggleActions: 'play reverse play reverse'
             }
         });

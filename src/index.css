@@ -119,13 +119,30 @@
   }
 
   body {
-    @apply text-foreground font-sans antialiased overflow-x-hidden;
-    background: linear-gradient(135deg, var(--color-background) 0%, var(--color-blue-dark) 100%);
-    background-attachment: fixed;
-    cursor: none;
-    transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
-    /* We use custom cursor */
+    @apply text-foreground font-sans antialiased;
+    overflow-x: clip;
+    /* We use custom cursor, but auto on mobile to be safe */
+    cursor: auto;
+    transition: color 0.4s ease-in-out;
+    background-color: var(--color-background);
   }
+
+  /* 
+    Fix for mobile (iOS) background-attachment: fixed bug 
+    We use a fixed pseudo-element instead of the body background
+  */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    background: linear-gradient(135deg, var(--color-background) 0%, var(--color-blue-dark) 100%);
+    transition: background 0.4s ease-in-out;
+  }
+
 
   /* Custom Scrollbar */
   ::-webkit-scrollbar {
@@ -146,13 +163,17 @@
     background: var(--color-accent);
   }
 
-  /* Make sure links handle the custom cursor visually */
-  a,
-  button,
-  [role="button"],
-  input,
-  select,
-  textarea {
-    cursor: none;
+  /* Make sure links handle the custom cursor visually on desktop */
+  @media (pointer: fine) {
+
+    body,
+    a,
+    button,
+    [role="button"],
+    input,
+    select,
+    textarea {
+      cursor: none;
+    }
   }
 }

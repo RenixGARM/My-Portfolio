@@ -30,7 +30,7 @@ export default function FeatureArtefacts() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: 'top 75%',
+                start: 'top 85%',
                 toggleActions: 'play reverse play reverse'
             }
         });

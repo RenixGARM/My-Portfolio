@@ -55,7 +55,7 @@ export default function TheArchive() {
                 ease: 'none',
                 scrollTrigger: {
                     trigger: card,
-                    start: 'top 80%', // when the next card enters 80% of viewport
+                    start: 'top 85%', // when the next card enters 85% of viewport
                     end: 'top 20%',   // until it reaches 20%
                     scrub: true,
                     toggleActions: 'play reverse play reverse'

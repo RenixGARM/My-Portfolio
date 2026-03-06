@@ -17,7 +17,7 @@ export default function Contact() {
                 ease: 'power3.out',
                 scrollTrigger: {
                     trigger: containerRef.current,
-                    start: 'top 80%',
+                    start: 'top 85%',
                     toggleActions: 'play reverse play reverse'
                 }
             }

@@ -8,6 +8,12 @@ export default function CustomCursor() {
         const cursor = cursorRef.current;
         if (!cursor) return;
 
+        // Disable custom cursor on touch devices (mobile/tablets)
+        if (window.matchMedia('(pointer: coarse)').matches) {
+            cursor.style.display = 'none';
+            return;
+        }
+
         // Move cursor with mouse
         const moveCursor = (e) => {
             gsap.to(cursor, {
@@ -28,6 +34,12 @@ export default function CustomCursor() {
 
         window.addEventListener('mousemove', moveCursor);
 
+        // Reset cursor on click to prevent it sticking when anchor jumping
+        const handleGlobalClick = () => {
+            gsap.to(cursor, { scale: 1, backgroundColor: 'transparent', borderColor: 'rgba(255, 255, 255, 0.5)', duration: 0.3 });
+        };
+        window.addEventListener('click', handleGlobalClick);
+
         // Add event listeners to all interactive elements
         const iteractives = document.querySelectorAll('a, button, .cursor-expand');
         iteractives.forEach(el => {
@@ -37,6 +49,7 @@ export default function CustomCursor() {
 
         return () => {
             window.removeEventListener('mousemove', moveCursor);
+            window.removeEventListener('click', handleGlobalClick);
             iteractives.forEach(el => {
                 el.removeEventListener('mouseenter', handleMouseEnter);
                 el.removeEventListener('mouseleave', handleMouseLeave);

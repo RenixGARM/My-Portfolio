@@ -35,7 +35,7 @@ export default function Services() {
                 ease: 'power3.out',
                 scrollTrigger: {
                     trigger: containerRef.current,
-                    start: 'top 75%',
+                    start: 'top 85%',
                     toggleActions: 'play reverse play reverse'
                 }
             }
