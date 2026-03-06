@@ -21,22 +21,13 @@ Bienvenido al código fuente de mi portfolio profesional. Este proyecto es una S
 - 🍪 **Banner de Cookies Legal**: Construido enteramente con estado local (Local Storage) y conforme a las normativas de privacidad (GDPR).
 - 📱 **Diseño 100% Responsivo**: Todas las interfaces y elementos interactivos se adaptan desde pantallas ultra anchas hasta dispositivos móviles.
 
-## Desarrollo Local
+## Aviso de Uso y Licencia
 
-Si deseas ejecutar este proyecto en tu entorno local:
+⚠️ **Este repositorio contiene el código fuente de mi portfolio personal y NO es una plantilla pública.**
 
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/RenixGARM/My-Portfolio.git
-   ```
-2. Instala las dependencias:
-   ```bash
-   npm install
-   ```
-3. Inicia el servidor de desarrollo:
-   ```bash
-   npm run dev
-   ```
+El código, diseño gráfico, estructura, textos y recursos audiovisuales de este proyecto están protegidos por derechos de autor. **Queda terminantemente prohibido copiar, clonar, bifurcar (fork), distribuir, modificar o utilizar este código o diseño total o parcialmente para proyectos propios o de terceros sin mi consentimiento expreso por escrito.**
+
+Este repositorio es público únicamente con fines demostrativos para reclutadores y clientes que deseen auditar mis habilidades técnicas y la arquitectura del código.
 
 ## Sobre Mí
 
