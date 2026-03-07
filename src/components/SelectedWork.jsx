@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const works = [
     {
@@ -84,16 +84,35 @@ const works = [
 
 function MobileSlider({ images }) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isPlaying, setIsPlaying] = useState(true);
 
     useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % images.length);
-        }, 3000);
+        let timer;
+        if (isPlaying) {
+            timer = setInterval(() => {
+                setCurrentIndex((prev) => (prev + 1) % images.length);
+            }, 3000);
+        }
         return () => clearInterval(timer);
-    }, [images.length]);
+    }, [images.length, isPlaying, currentIndex]);
+
+    const handleNext = (e) => {
+        e.stopPropagation();
+        setCurrentIndex((prev) => (prev + 1) % images.length);
+    };
+
+    const handlePrev = (e) => {
+        e.stopPropagation();
+        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    };
+
+    const togglePlay = (e) => {
+        e.stopPropagation();
+        setIsPlaying(!isPlaying);
+    };
 
     return (
-        <div className="relative w-[260px] h-[540px] md:w-[320px] md:h-[660px] mx-auto border-[8px] md:border-[12px] border-[#161616] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl bg-background transform transition-transform duration-700 ease-out group-hover:scale-105 pointer-events-auto">
+        <div className="relative w-[260px] h-[540px] md:w-[320px] md:h-[660px] mx-auto border-[8px] md:border-[12px] border-[#161616] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl bg-background transform transition-transform duration-700 ease-out group-hover:scale-105 pointer-events-auto group/slider">
             {/* Camera / Notch */}
             <div className="absolute top-0 inset-x-0 h-6 flex justify-center z-20">
                 <div className="w-1/3 h-full bg-[#161616] rounded-b-[1rem]"></div>
@@ -116,22 +135,52 @@ function MobileSlider({ images }) {
                     />
                 ))}
             </div>
+
+            {/* Controls Overlay */}
+            <button onClick={handlePrev} className="absolute left-2 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center w-8 h-8 bg-background/80 backdrop-blur-md rounded-full border border-foreground/10 shadow-lg text-foreground/70 hover:text-foreground transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 pointer-events-auto" aria-label="Previous image">
+                <ChevronLeft size={18} />
+            </button>
+            <button onClick={handleNext} className="absolute right-2 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center w-8 h-8 bg-background/80 backdrop-blur-md rounded-full border border-foreground/10 shadow-lg text-foreground/70 hover:text-foreground transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 pointer-events-auto" aria-label="Next image">
+                <ChevronRight size={18} />
+            </button>
+            <button onClick={togglePlay} className="absolute top-10 right-4 z-30 flex items-center justify-center w-8 h-8 bg-background/80 backdrop-blur-md rounded-full border border-foreground/10 shadow-lg text-foreground/70 hover:text-foreground transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 pointer-events-auto" aria-label={isPlaying ? "Pause autoplay" : "Play autoplay"}>
+                {isPlaying ? <Pause size={16} /> : <Play size={16} />}
+            </button>
         </div>
     );
 }
 
 function LaptopSlider({ images }) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isPlaying, setIsPlaying] = useState(true);
 
     useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % images.length);
-        }, 3000);
+        let timer;
+        if (isPlaying) {
+            timer = setInterval(() => {
+                setCurrentIndex((prev) => (prev + 1) % images.length);
+            }, 3000);
+        }
         return () => clearInterval(timer);
-    }, [images.length]);
+    }, [images.length, isPlaying, currentIndex]);
+
+    const handleNext = (e) => {
+        e.stopPropagation();
+        setCurrentIndex((prev) => (prev + 1) % images.length);
+    };
+
+    const handlePrev = (e) => {
+        e.stopPropagation();
+        setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    };
+
+    const togglePlay = (e) => {
+        e.stopPropagation();
+        setIsPlaying(!isPlaying);
+    };
 
     return (
-        <div className="relative w-[340px] md:w-[500px] lg:w-[600px] mx-auto pointer-events-auto transform transition-transform duration-700 ease-out group-hover:scale-105">
+        <div className="relative w-[340px] md:w-[500px] lg:w-[600px] mx-auto pointer-events-auto transform transition-transform duration-700 ease-out group-hover:scale-105 group/slider">
             {/* Screen Bezel */}
             <div className="relative aspect-[16/10] bg-[#161616] border-[4px] border-[#222] rounded-t-xl overflow-hidden shadow-2xl p-2 md:p-3">
                 {/* Screen Content Wrapper */}
@@ -148,9 +197,21 @@ function LaptopSlider({ images }) {
                                 key={i}
                                 onClick={(e) => { e.stopPropagation(); setCurrentIndex(i); }}
                                 className={`w-2 h-2 rounded-full transition-colors drop-shadow-md ${i === currentIndex ? 'bg-foreground' : 'bg-foreground/30 hover:bg-foreground/60'}`}
+                                aria-label={`Go to screenshot ${i + 1}`}
                             />
                         ))}
                     </div>
+
+                    {/* Controls Overlay */}
+                    <button onClick={handlePrev} className="absolute left-4 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center w-10 h-10 bg-background/80 backdrop-blur-md rounded-full border border-foreground/10 shadow-lg text-foreground/70 hover:text-foreground transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 pointer-events-auto" aria-label="Previous image">
+                        <ChevronLeft size={20} />
+                    </button>
+                    <button onClick={handleNext} className="absolute right-4 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center w-10 h-10 bg-background/80 backdrop-blur-md rounded-full border border-foreground/10 shadow-lg text-foreground/70 hover:text-foreground transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 pointer-events-auto" aria-label="Next image">
+                        <ChevronRight size={20} />
+                    </button>
+                    <button onClick={togglePlay} className="absolute top-4 right-4 z-30 flex items-center justify-center w-10 h-10 bg-background/80 backdrop-blur-md rounded-full border border-foreground/10 shadow-lg text-foreground/70 hover:text-foreground transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 pointer-events-auto" aria-label={isPlaying ? "Pause autoplay" : "Play autoplay"}>
+                        {isPlaying ? <Pause size={18} /> : <Play size={18} />}
+                    </button>
                 </div>
             </div>
             {/* Base */}
