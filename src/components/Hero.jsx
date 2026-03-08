@@ -76,7 +76,7 @@ export default function Hero() {
                 {/* Headline with Fade-and-Slide Overflow Hidden Containers */}
                 <h1 className="text-5xl md:text-[6rem] lg:text-[8rem] font-display font-light tracking-tighter leading-[0.95] mb-8 w-full flex flex-col items-center">
                     <div className="overflow-hidden pb-2">
-                        <div className="hero-reveal">Diseñando Sistemas que</div>
+                        <div className="hero-reveal">Diseñando sistemas que</div>
                     </div>
                     <div className="overflow-hidden pb-4 md:mt-2 h-[1.2em] flex items-center justify-center">
                         <div className="hero-reveal font-serif italic text-accent font-light min-w-[200px] md:min-w-[400px]">

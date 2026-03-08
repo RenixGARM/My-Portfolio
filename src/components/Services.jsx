@@ -5,18 +5,18 @@ import gsap from 'gsap';
 const services = [
     {
         id: "01",
-        title: "IA Generativa",
-        description: "Arquitecturas RAG, Agentes Autónomos y LLMs integrados en flujos empresariales."
+        title: "IA generativa",
+        description: "Arquitecturas RAG, agentes autónomos y LLMs integrados en flujos empresariales."
     },
     {
         id: "02",
         title: "Infraestructura",
-        description: "Gestión de Sistemas Críticos, Cloud (Azure, AWS) y Networking seguro."
+        description: "Gestión de sistemas críticos, cloud (Azure, AWS) y networking seguro."
     },
     {
         id: "03",
         title: "Automatización",
-        description: "Orquestación con n8n, Python Scripts y eliminación de deuda técnica manual."
+        description: "Orquestación con n8n, scripts de Python y eliminación de deuda técnica manual."
     }
 ];
 

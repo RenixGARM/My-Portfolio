@@ -62,11 +62,11 @@ export default function Footer() {
                 <div className="flex flex-col items-center gap-4">
 
                     <div className="flex flex-wrap justify-center gap-4 text-xs font-sans text-foreground/50 uppercase tracking-widest mt-4">
-                        <Link to="/aviso-legal" className="hover:text-accent transition-colors">Aviso Legal</Link>
+                        <Link to="/aviso-legal" className="hover:text-accent transition-colors">Aviso legal</Link>
                         <span>|</span>
-                        <Link to="/politica-privacidad" className="hover:text-accent transition-colors">Política de Privacidad</Link>
+                        <Link to="/politica-privacidad" className="hover:text-accent transition-colors">Política de privacidad</Link>
                         <span>|</span>
-                        <Link to="/politica-cookies" className="hover:text-accent transition-colors">Política de Cookies</Link>
+                        <Link to="/politica-cookies" className="hover:text-accent transition-colors">Política de cookies</Link>
                     </div>
 
                     <p className="text-foreground/30 text-xs font-mono mt-2">

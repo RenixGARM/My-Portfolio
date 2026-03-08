@@ -42,9 +42,6 @@ export default function About() {
                         <p className="about-reveal text-xl font-sans text-foreground font-normal leading-relaxed">
                             Esa misma curiosidad "cabezota" es la que me ha traído a la Inteligencia Artificial. Me fascina la velocidad a la que está cambiando todo; ver cómo pasamos de gestionar código estático a crear agentes que deciden por sí mismos o vídeos que parecen puro cine. Hoy, mi enfoque es unir esos dos mundos: aplicar toda mi experiencia en infraestructura para construir soluciones de IA, como arquitecturas de agentes y sistemas de recuperación de información, que sean tan innovadoras como robustas.
                         </p>
-                        <p className="about-reveal text-xl font-sans text-foreground font-normal leading-relaxed">
-                            Cuando cierro el portátil, esa energía no se apaga. Me la llevo a la pista de voley, donde la precisión y el trabajo en equipo lo son todo. Soy un apasionado de las buenas historias, ya sea en un videojuego, una serie de anime o una buena película.
-                        </p>
                     </div>
                 </div>
             </div>

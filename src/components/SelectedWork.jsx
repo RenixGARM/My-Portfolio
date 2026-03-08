@@ -17,29 +17,29 @@ const works = [
                     <strong>FinFlow</strong> no es solo un gestor de finanzas; es un experimento exitoso en la nueva frontera del desarrollo de software. Esta aplicación nace para resolver la fricción sistemática del registro manual de gastos, transformando una tarea tediosa en un flujo automatizado, inteligente y multiplataforma.
                 </p>
                 <div className="flex flex-col gap-2">
-                    <h4 className="text-xl font-display font-light text-accent">El Problema: La Brecha de Datos Financieros</h4>
+                    <h4 className="text-xl font-display font-light text-accent">El problema: la brecha de datos financieros</h4>
                     <p>La mayoría de los usuarios abandonan el seguimiento de sus finanzas debido a la complejidad de categorizar gastos y la falta de integración entre sus herramientas de uso diario. FinFlow elimina esta barrera mediante una interfaz minimalista y un motor de procesamiento cognitivo que entiende el contexto de cada transacción.</p>
                 </div>
                 <div className="flex flex-col gap-2">
-                    <h4 className="text-xl font-display font-light text-accent">Stack Tecnológico de Vanguardia</h4>
+                    <h4 className="text-xl font-display font-light text-accent">Stack tecnológico de vanguardia</h4>
                     <ul className="list-disc pl-5 space-y-2">
                         <li><strong>Frontend & PWA:</strong> Construida con React 19 y Tailwind CSS, la aplicación ofrece una experiencia nativa en cualquier dispositivo (iOS, Android, Desktop) gracias a su arquitectura de Progressive Web App, garantizando fluidez y acceso offline.</li>
                         <li><strong>Cerebro de IA (Gemini Flash):</strong> Integración directa con el modelo Gemini 2.5 Flash para la categorización inteligente de transacciones y procesamiento de tickets vía OCR. La IA no solo etiqueta, sino que extrae insights accionables de los hábitos de consumo.</li>
-                        <li><strong>Ecosistema de Datos (Google Sheets API):</strong> A diferencia de las bases de datos cerradas, FinFlow utiliza Google Sheets como backend opcional. Esto otorga al usuario la soberanía total sobre sus datos, permitiendo auditorías externas y visualizaciones personalizadas en una herramienta que ya conocen y dominan.</li>
+                        <li><strong>Ecosistema de datos (Google Sheets API):</strong> A diferencia de las bases de datos cerradas, FinFlow utiliza Google Sheets como backend opcional. Esto otorga al usuario la soberanía total sobre sus datos, permitiendo auditorías externas y visualizaciones personalizadas en una herramienta que ya conocen y dominan.</li>
                     </ul>
                 </div>
                 <div className="flex flex-col gap-2">
-                    <h4 className="text-xl font-display font-light text-accent">Innovación en el Proceso: Vibe Coding</h4>
+                    <h4 className="text-xl font-display font-light text-accent">Innovación en el proceso: Vibe Coding</h4>
                     <p>Lo que hace a FinFlow verdaderamente disruptiva es su origen: ha sido desarrollada íntegramente mediante lenguaje natural (Vibe Coding).</p>
                     <p>Este proyecto demuestra que la barrera entre la idea y la ejecución se ha disuelto. Mediante una colaboración simbiótica entre el ingeniero y modelos de lenguaje avanzados, se ha logrado un ciclo de iteración ultrarrápido, donde la arquitectura, la lógica de negocio y el diseño UI/UX fueron esculpidos a través de diálogos técnicos de alto nivel, priorizando la intención y el flujo sobre la sintaxis tradicional.</p>
                 </div>
                 <div className="flex flex-col gap-2">
-                    <h4 className="text-xl font-display font-light text-accent">Características Clave:</h4>
+                    <h4 className="text-xl font-display font-light text-accent">Características clave:</h4>
                     <ul className="list-disc pl-5 space-y-2">
-                        <li><strong>OCR Inteligente:</strong> Captura de gastos mediante cámara con extracción automática de datos.</li>
-                        <li><strong>Dashboard Analítico:</strong> Visualización dinámica de flujos de caja mediante Recharts.</li>
-                        <li><strong>Sincronización en Tiempo Real:</strong> Persistencia híbrida entre almacenamiento local y la nube de Google.</li>
-                        <li><strong>Privacidad por Diseño:</strong> Control total del usuario sobre sus credenciales y almacenamiento.</li>
+                        <li><strong>OCR inteligente:</strong> Captura de gastos mediante cámara con extracción automática de datos.</li>
+                        <li><strong>Dashboard analítico:</strong> Visualización dinámica de flujos de caja mediante Recharts.</li>
+                        <li><strong>Sincronización en tiempo real:</strong> Persistencia híbrida entre almacenamiento local y la nube de Google.</li>
+                        <li><strong>Privacidad por diseño:</strong> Control total del usuario sobre sus credenciales y almacenamiento.</li>
                     </ul>
                 </div>
                 <p className="mt-4 text-accent italic font-serif">
@@ -50,30 +50,30 @@ const works = [
     },
     {
         id: 2,
-        title: "Automatización y Agentes",
-        description: "Orquestación n8n y Enjambres de Agentes Autónomos",
+        title: "Automatización y agentes",
+        description: "Orquestación n8n y enjambres de agentes autónomos",
         gradient: "from-zinc-800/20 to-black",
         device: "laptop",
         images: ["/vps/1.png", "/vps/2.png", "/vps/3.png"],
         modalContent: (
             <div className="flex flex-col gap-6 font-sans font-normal text-foreground text-justify">
                 <p>
-                    <strong>Automatización y Agentes</strong> es la piedra angular de mis soluciones de productividad empresarial. A través de la orquestación avanzada de agentes y flujos de trabajo, transformo operaciones manuales en sistemas autónomos de alta eficiencia.
+                    <strong>Automatización y agentes</strong> es la piedra angular de mis soluciones de productividad empresarial. A través de la orquestación avanzada de agentes y flujos de trabajo, transformo operaciones manuales en sistemas autónomos de alta eficiencia.
                 </p>
                 <div className="flex flex-col gap-2">
-                    <h4 className="text-xl font-display font-light text-accent">Automatización con n8n y Agentes</h4>
+                    <h4 className="text-xl font-display font-light text-accent">Automatización con n8n y agentes</h4>
                     <p>Diseño y construyo complejas canalizaciones de datos utilizando <strong>n8n</strong>. Estos flujos integran sistemas desconectados (CRMs, bases de datos, APIs de terceros, IA) para automatizar tareas repetitivas. Además, implemento enjambres de Inteligencia Artificial capaces de tomar decisiones, procesar lenguaje natural y ejecutar acciones contextualmente, multiplicando las capacidades de cualquier equipo humano.</p>
                 </div>
                 <div className="flex flex-col gap-2">
-                    <h4 className="text-xl font-display font-light text-accent">Impacto en el Negocio</h4>
+                    <h4 className="text-xl font-display font-light text-accent">Impacto en el negocio</h4>
                     <ul className="list-disc pl-5 space-y-2">
-                        <li><strong>Optimización de Procesos:</strong> Eliminación de cuellos de botella y reducción drástica de errores humanos en la operativa diaria.</li>
-                        <li><strong>Recuperación de Tiempo:</strong> Devolución de miles de horas al equipo para que puedan concentrarse en trabajo creativo, estratégico y de alto valor.</li>
-                        <li><strong>Aumento de Beneficios:</strong> Al minimizar los costes operativos y acelerar la entrega de valor, las automatizaciones impactan directa y positivamente en el ROI del cliente.</li>
+                        <li><strong>Optimización de procesos:</strong> Eliminación de cuellos de botella y reducción drástica de errores humanos en la operativa diaria.</li>
+                        <li><strong>Recuperación de tiempo:</strong> Devolución de miles de horas al equipo para que puedan concentrarse en trabajo creativo, estratégico y de alto valor.</li>
+                        <li><strong>Aumento de beneficios:</strong> Al minimizar los costes operativos y acelerar la entrega de valor, las automatizaciones impactan directa y positivamente en el ROI del cliente.</li>
                     </ul>
                 </div>
                 <div className="flex flex-col gap-2">
-                    <h4 className="text-xl font-display font-light text-accent">Infraestructura Propia y Gestionada</h4>
+                    <h4 className="text-xl font-display font-light text-accent">Infraestructura propia y gestionada</h4>
                     <p>La independencia tecnológica es clave. He desplegado mi propia instancia de n8n dentro de un <strong>Servidor Virtual Privado (VPS)</strong> dedicado.</p>
                     <p>Para la orquestación y despliegue rápido, administro toda la infraestructura a través de <strong>Easypanel</strong>. Esta capa de abstracción simplifica enormemente el mantenimiento de contenedores Docker y la gestión de redes, permitiéndome enfocar el 100% de mi energía y atención donde realmente importa: el diseño, funcionamiento y escalabilidad de los flujos de trabajo de mis clientes.</p>
                 </div>

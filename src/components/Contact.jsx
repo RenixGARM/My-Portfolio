@@ -40,7 +40,7 @@ export default function Contact() {
                             <input type="text" name="name" required className="bg-transparent border-b border-foreground/20 text-foreground px-2 py-3 focus:outline-none focus:border-accent transition-colors font-sans w-full" />
                         </div>
                         <div className="flex flex-col gap-2">
-                            <label className="text-foreground text-sm font-sans tracking-wide uppercase">Correo Electrónico</label>
+                            <label className="text-foreground text-sm font-sans tracking-wide uppercase">Correo electrónico</label>
                             <input type="email" name="email" required className="bg-transparent border-b border-foreground/20 text-foreground px-2 py-3 focus:outline-none focus:border-accent transition-colors font-sans w-full" />
                         </div>
                         <div className="flex flex-col gap-2">

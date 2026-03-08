@@ -26,7 +26,7 @@ export default function Navbar() {
                     <a href="#proyectos" className="font-sans text-[10px] sm:text-xs uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors cursor-pointer">Proyectos</a>
                     <a href="#experiencia" className="font-sans text-xs uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors cursor-pointer hidden md:block">Experiencia</a>
                     <a href="#skills" className="font-sans text-xs uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors cursor-pointer hidden lg:block">Skills</a>
-                    <a href="#proceso" className="font-sans text-xs uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors cursor-pointer hidden md:block">El Proceso</a>
+                    <a href="#proceso" className="font-sans text-xs uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors cursor-pointer hidden md:block">El proceso</a>
                     <a href="https://www.linkedin.com/in/roberto-chamorro-41034586" target="_blank" rel="noreferrer" className="font-sans text-[10px] sm:text-xs uppercase tracking-widest text-foreground/60 hover:text-foreground transition-colors cursor-pointer hidden sm:block">LinkedIn</a>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3 shrink-0">
@@ -54,7 +54,7 @@ export default function Navbar() {
                         <a href="#proyectos" onClick={() => setIsOpen(false)} className="font-sans text-sm uppercase tracking-widest text-foreground/80 hover:text-foreground transition-colors cursor-pointer">Proyectos</a>
                         <a href="#experiencia" onClick={() => setIsOpen(false)} className="font-sans text-sm uppercase tracking-widest text-foreground/80 hover:text-foreground transition-colors cursor-pointer">Experiencia</a>
                         <a href="#skills" onClick={() => setIsOpen(false)} className="font-sans text-sm uppercase tracking-widest text-foreground/80 hover:text-foreground transition-colors cursor-pointer">Skills</a>
-                        <a href="#proceso" onClick={() => setIsOpen(false)} className="font-sans text-sm uppercase tracking-widest text-foreground/80 hover:text-foreground transition-colors cursor-pointer">El Proceso</a>
+                        <a href="#proceso" onClick={() => setIsOpen(false)} className="font-sans text-sm uppercase tracking-widest text-foreground/80 hover:text-foreground transition-colors cursor-pointer">El proceso</a>
                         <a href="https://www.linkedin.com/in/roberto-chamorro-41034586" target="_blank" rel="noreferrer" onClick={() => setIsOpen(false)} className="font-sans text-sm uppercase tracking-widest text-foreground/80 hover:text-foreground transition-colors cursor-pointer">LinkedIn</a>
                     </div>
                 </div>

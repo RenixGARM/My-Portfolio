@@ -6,7 +6,7 @@ import { Briefcase, BrainCircuit, Cloud } from 'lucide-react';
 const archiveData = [
     {
         id: 1,
-        title: "10+ Años de Infraestructura IT",
+        title: "10+ años de infraestructura IT",
         subtitle: "Getronics / Capgemini",
         icon: <Briefcase className="w-8 h-8 md:w-10 md:h-10 text-moss" />,
         highlight: ["ServiceNow", "M365 (MD-102)"],
@@ -16,8 +16,8 @@ const archiveData = [
     },
     {
         id: 2,
-        title: "Especialización en IA y Datos",
-        subtitle: "Formación Avanzada en IA Generativa (UDIA)",
+        title: "Especialización en IA y datos",
+        subtitle: "Formación avanzada en IA generativa (UDIA)",
         icon: <BrainCircuit className="w-8 h-8 md:w-10 md:h-10 text-cream" />,
         highlight: ["LangChain", "Pinecone", "Chroma"],
         description: "Desarrollo de pipelines RAG avanzados, ingesta y vectorización de documentación técnica, e integración de LLMs para tareas complejas y consultoría automatizada.",
@@ -26,8 +26,8 @@ const archiveData = [
     },
     {
         id: 3,
-        title: "Redes y Cloud Empresarial",
-        subtitle: "Certificaciones y Fundamentos Sólidos",
+        title: "Redes y cloud empresarial",
+        subtitle: "Certificaciones y fundamentos sólidos",
         icon: <Cloud className="w-8 h-8 md:w-10 md:h-10 text-cream" />,
         highlight: ["AWS Fundamentals", "Azure Fundamentals", "CISCO CCNA"],
         description: "Conocimiento profundo de las capas de red y arquitectura cloud, permitiendo diseñar agentes AI que se desplieguen y consuman servicios de manera segura, escalable y resiliente.",
@@ -73,7 +73,7 @@ export default function TheArchive() {
                         El <span className="font-serif italic text-clay">Archivo</span>
                     </h2>
                     <p className="text-charcoal/60 font-mono text-sm max-w-xl mx-auto uppercase tracking-widest">
-                        Fundamentos & Evolución
+                        Fundamentos & evolución
                     </p>
                 </div>
 

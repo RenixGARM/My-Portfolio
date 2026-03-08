@@ -44,7 +44,7 @@ export default function FeatureArtefacts() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="fa-title mb-20 md:w-2/3">
                     <h2 className="text-4xl md:text-5xl font-bold font-sans tracking-tight mb-6">
-                        Artefactos <span className="font-serif italic text-clay">Desplegados</span>
+                        Artefactos <span className="font-serif italic text-clay">desplegados</span>
                     </h2>
                     <p className="text-cream/60 text-lg">
                         Sistemas tangibles que demuestran la transición entre infraestructura clásica y agentes autónomos inteligentemente orquestados.
@@ -101,7 +101,7 @@ export default function FeatureArtefacts() {
                             {/* Status footer */}
                             <div className="absolute bottom-4 left-6 flex items-center gap-2">
                                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                                <span className="font-mono text-[10px] text-cream/50 uppercase">Workers n8n Activos</span>
+                                <span className="font-mono text-[10px] text-cream/50 uppercase">Workers n8n activos</span>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@ export default function FeatureArtefacts() {
                     <div className="fa-card bg-cream/5 border border-cream/10 rounded-2xl overflow-hidden flex flex-col">
                         <div className="p-4 border-b border-cream/10 flex items-center gap-2 bg-cream/5">
                             <Activity className="w-4 h-4 text-clay" />
-                            <span className="font-mono text-xs uppercase tracking-wider text-cream/70">Fiabilidad Técnica</span>
+                            <span className="font-mono text-xs uppercase tracking-wider text-cream/70">Fiabilidad técnica</span>
                         </div>
                         <div className="p-6 grow flex flex-col justify-center min-h-[240px]">
 
@@ -135,7 +135,7 @@ export default function FeatureArtefacts() {
                                 ))}
                             </div>
                             <div className="flex justify-between items-center mt-4 text-[10px] uppercase font-mono text-cream/40">
-                                <span>Hace 30 Días</span>
+                                <span>Hace 30 días</span>
                                 <span>Hoy</span>
                             </div>
                         </div>
