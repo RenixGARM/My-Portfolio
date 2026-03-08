@@ -285,7 +285,7 @@ export default function SelectedWork() {
 
                         if (hasMockup) {
                             return (
-                                <div key={work.id} className="work-card group relative block w-full py-20 cursor-pointer overflow-hidden" onClick={() => setSelectedProject(work)}>
+                                <div key={work.id} className="work-card group relative block w-full py-20 overflow-hidden">
                                     {/* Mockup Frame (Directly on Background) */}
                                     <div className="relative z-10 w-full h-full flex justify-center items-center">
                                         {work.device === "mobile" ? (
@@ -297,7 +297,7 @@ export default function SelectedWork() {
 
                                     {/* Hover Titles */}
                                     <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-center items-center pointer-events-none z-20">
-                                        <div className="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out bg-background/80 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-foreground/5 mt-auto flex flex-col items-center pointer-events-auto">
+                                        <div className="translate-y-0 opacity-100 md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out bg-background/80 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-foreground/5 mt-auto flex flex-col items-center pointer-events-auto shadow-lg md:shadow-none">
                                             <h3 className="text-3xl font-display font-light text-center">{work.title}</h3>
                                             <p className="text-foreground font-sans font-normal text-center mt-2 mb-4">{work.description}</p>
                                             <button onClick={(e) => { e.stopPropagation(); setSelectedProject(work); }} className="px-6 py-2 bg-foreground text-background text-sm font-medium rounded-full hover:scale-105 transition-transform">
@@ -310,7 +310,7 @@ export default function SelectedWork() {
                         }
 
                         return (
-                            <div key={work.id} className="work-card group cursor-expand relative block w-full overflow-hidden bg-container rounded-2xl md:rounded-3xl aspect-[16/9] md:aspect-[21/9]">
+                            <div key={work.id} className="work-card group relative block w-full overflow-hidden bg-container rounded-2xl md:rounded-3xl aspect-[16/9] md:aspect-[21/9]">
                                 {/* Background Gradient */}
                                 <div className={`absolute inset-0 bg-gradient-to-br ${work.gradient} transition-transform duration-700 ease-out group-hover:scale-105`} />
 
@@ -319,7 +319,7 @@ export default function SelectedWork() {
 
                                 {/* Hover / Status Overlay */}
                                 <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end pointer-events-none z-20">
-                                    <div className="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                                    <div className="translate-y-0 opacity-100 md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
                                         <div className="flex flex-col md:flex-row justify-between items-start gap-4 mt-8 pointer-events-auto">
                                             <h3 className="text-3xl font-display font-light">{work.title}</h3>
                                             <div className="flex flex-col items-start gap-4">
