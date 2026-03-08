@@ -31,9 +31,11 @@ export default function Navbar() {
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3 shrink-0">
                     <ThemeToggle />
-                    <MagneticButton href="#contact" className="px-4 py-2 sm:px-6 text-[10px] sm:text-xs uppercase tracking-wider bg-foreground text-background rounded-full transition-colors cursor-pointer btn-fill-hover shrink-0">
-                        <span className="hidden sm:inline">Hablemos</span>
-                        <span className="sm:hidden">CV</span>
+                    <MagneticButton href="#contact" className="px-4 py-2 sm:px-6 text-[10px] sm:text-xs uppercase tracking-wider bg-foreground text-background rounded-full transition-colors cursor-pointer btn-fill-hover shrink-0 hidden sm:inline-flex">
+                        <span>Hablemos</span>
+                    </MagneticButton>
+                    <MagneticButton href="/Roberto_Chamorro_AI_Engineer.pdf" target="_blank" rel="noopener noreferrer" className="px-4 py-2 sm:px-6 text-[10px] sm:text-xs uppercase tracking-wider bg-foreground text-background rounded-full transition-colors cursor-pointer btn-fill-hover shrink-0 inline-flex sm:hidden">
+                        <span>CV</span>
                     </MagneticButton>
                     <button
                         className="md:hidden p-2 -mr-2 text-foreground/80 hover:text-foreground transition-colors"
