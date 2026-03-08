@@ -12,7 +12,7 @@ const works = [
         device: "mobile",
         images: ["/finflow/1.jpg", "/finflow/2.jpg", "/finflow/3.jpg", "/finflow/4.jpg", "/finflow/5.jpg"],
         modalContent: (
-            <div className="flex flex-col gap-6 font-sans font-normal text-foreground">
+            <div className="flex flex-col gap-6 font-sans font-normal text-foreground text-justify">
                 <p>
                     <strong>FinFlow</strong> no es solo un gestor de finanzas; es un experimento exitoso en la nueva frontera del desarrollo de software. Esta aplicación nace para resolver la fricción sistemática del registro manual de gastos, transformando una tarea tediosa en un flujo automatizado, inteligente y multiplataforma.
                 </p>
@@ -56,7 +56,7 @@ const works = [
         device: "laptop",
         images: ["/vps/1.png", "/vps/2.png", "/vps/3.png"],
         modalContent: (
-            <div className="flex flex-col gap-6 font-sans font-normal text-foreground">
+            <div className="flex flex-col gap-6 font-sans font-normal text-foreground text-justify">
                 <p>
                     <strong>Automatización y Agentes</strong> es la piedra angular de mis soluciones de productividad empresarial. A través de la orquestación avanzada de agentes y flujos de trabajo, transformo operaciones manuales en sistemas autónomos de alta eficiencia.
                 </p>

@@ -118,6 +118,11 @@
     scroll-behavior: smooth;
   }
 
+  p,
+  li {
+    @apply text-justify;
+  }
+
   body {
     @apply text-foreground font-sans antialiased;
     overflow-x: clip;
