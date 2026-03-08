@@ -296,11 +296,11 @@ export default function SelectedWork() {
                                     </div>
 
                                     {/* Hover Titles */}
-                                    <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-center items-center pointer-events-none z-20">
-                                        <div className="translate-y-0 opacity-100 md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out bg-background/80 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-foreground/5 mt-auto flex flex-col items-center pointer-events-auto shadow-lg md:shadow-none">
-                                            <h3 className="text-3xl font-display font-light text-center">{work.title}</h3>
-                                            <p className="text-foreground font-sans font-normal text-center mt-2 mb-4">{work.description}</p>
-                                            <button onClick={(e) => { e.stopPropagation(); setSelectedProject(work); }} className="px-6 py-2 bg-foreground text-background text-sm font-medium rounded-full hover:scale-105 transition-transform">
+                                    <div className="absolute inset-x-0 bottom-0 p-4 md:p-12 flex flex-col justify-end items-center pointer-events-none z-20">
+                                        <div className="translate-y-0 opacity-100 md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out bg-background/90 md:bg-background/80 backdrop-blur-md p-4 md:p-8 rounded-2xl border border-foreground/5 mt-auto flex flex-col items-center pointer-events-auto shadow-lg md:shadow-none w-[90%] md:w-auto mx-auto mb-4 md:mb-0">
+                                            <h3 className="text-xl md:text-3xl font-display font-light text-center">{work.title}</h3>
+                                            <p className="hidden md:block text-foreground font-sans font-normal text-center mt-2 mb-4">{work.description}</p>
+                                            <button onClick={(e) => { e.stopPropagation(); setSelectedProject(work); }} className="px-4 py-2 md:px-6 md:py-2 mt-3 md:mt-0 bg-foreground text-background text-xs md:text-sm font-medium rounded-full hover:scale-105 transition-transform">
                                                 Saber más
                                             </button>
                                         </div>
@@ -318,13 +318,13 @@ export default function SelectedWork() {
                                 <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:linear-gradient(to_bottom,black,transparent)] pointer-events-none" />
 
                                 {/* Hover / Status Overlay */}
-                                <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end pointer-events-none z-20">
-                                    <div className="translate-y-0 opacity-100 md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
-                                        <div className="flex flex-col md:flex-row justify-between items-start gap-4 mt-8 pointer-events-auto">
-                                            <h3 className="text-3xl font-display font-light">{work.title}</h3>
-                                            <div className="flex flex-col items-start gap-4">
-                                                <p className="text-foreground font-sans font-normal md:max-w-xs">{work.description}</p>
-                                                <button onClick={(e) => { e.stopPropagation(); setSelectedProject(work); }} className="px-6 py-2 bg-foreground text-background text-sm font-medium rounded-full hover:scale-105 transition-transform">
+                                <div className="absolute inset-x-0 bottom-0 p-4 md:p-12 flex flex-col justify-end pointer-events-none z-20">
+                                    <div className="translate-y-0 opacity-100 md:translate-y-4 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out bg-background/90 md:bg-transparent backdrop-blur-md md:backdrop-blur-none p-4 md:p-0 rounded-2xl md:rounded-none w-[90%] md:w-full mx-auto mb-4 md:mb-0 pointer-events-auto shadow-lg md:shadow-none">
+                                        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-3 md:gap-4">
+                                            <h3 className="text-xl md:text-3xl font-display font-light text-center md:text-left">{work.title}</h3>
+                                            <div className="flex flex-col items-center md:items-start gap-3 md:gap-4 w-full md:w-auto">
+                                                <p className="hidden md:block text-foreground font-sans font-normal md:max-w-xs">{work.description}</p>
+                                                <button onClick={(e) => { e.stopPropagation(); setSelectedProject(work); }} className="px-4 py-2 md:px-6 md:py-2 bg-foreground text-background text-xs md:text-sm font-medium rounded-full hover:scale-105 transition-transform">
                                                     Saber más
                                                 </button>
                                             </div>
