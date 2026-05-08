@@ -10,7 +10,7 @@ const works = [
         description: "Motor Financiero NLP via Google AI Studio",
         gradient: "from-blue-900/20 to-black",
         device: "mobile",
-        images: ["/finflow/1.jpg", "/finflow/2.jpg", "/finflow/3.jpg", "/finflow/4.jpg", "/finflow/5.jpg"],
+        images: ["/finflow/1.jpg", "/finflow/2.jpg", "/finflow/3.jpg", "/finflow/4.jpg", "/finflow/5.jpg", "/finflow/6.jpg", "/finflow/7.jpg", "/finflow/8.jpg"],
         modalContent: (
             <div className="flex flex-col gap-6 font-sans font-normal text-foreground text-justify">
                 <p>
@@ -120,7 +120,7 @@ function MobileSlider({ images, onZoom }) {
 
             <div className="relative w-full h-full flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                 {images.map((src, i) => (
-                    <img key={i} src={src} alt={`Screenshot ${i + 1}`} className="w-full h-full object-cover shrink-0 pointer-events-none" />
+                    <img key={i} src={src} alt={`Screenshot ${i + 1}`} className="w-full h-full object-contain shrink-0 pointer-events-none" />
                 ))}
             </div>
 
